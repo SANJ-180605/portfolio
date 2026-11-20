@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
@@ -47,27 +47,38 @@ const skillCategories = [
 const projects = [
   {
     number: "01",
-    title: "Medi-Link",
-    desc: "A full-stack medical communication platform with role-based dashboards and integrated ML/DL analysis.",
-    tags: ["React", "FastAPI", "PostgreSQL", "ML/DL"],
+    title: "LoanTrace AI RAG System",
+    desc: "An AI-powered platform to extract, verify, and query financial data from PDF loan application packages using RAG, GLiNER NER, and FastAPI + React.",
+    tags: ["RAG", "GLiNER", "FastAPI", "React"],
+    github: "https://github.com/SANJ-180605/loantrace-AI-rag-system",
   },
   {
     number: "02",
-    title: "EventHub",
-    desc: "MERN event management platform with concurrent seat booking and payment verification.",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    title: "Skin Lesion Monitoring System",
+    desc: "A Confidence-Scored Deep Learning Pipeline for Skin Lesion Segmentation, Classification, and Follow-Up Monitoring.",
+    tags: ["Deep Learning", "Segmentation", "Classification", "Python"],
+    github: "https://github.com/SANJ-180605/Skin-Lesion-monitoring-System",
   },
   {
     number: "03",
-    title: "Student Performance Prediction",
-    desc: "A machine learning model predicting student outcomes from academic and behavioral data.",
-    tags: ["Python", "Pandas", "Scikit-Learn"],
+    title: "Innection — GNN Friend Recommender",
+    desc: "A friend recommender app based on age group and similar interests, with public graph and dynamic pages with interest according to age.",
+    tags: ["GNN", "Graph Neural Networks", "React", "Node.js"],
+    github: "https://github.com/SANJ-180605/Innection-gnn-based-freind-recomender-app",
   },
   {
     number: "04",
-    title: "Weather App",
-    desc: "React app that fetches live weather data and displays forecasts in a clean responsive interface.",
-    tags: ["React", "REST API", "JavaScript"],
+    title: "NutriSnap",
+    desc: "A smart nutrition tracking application that helps users snap, track, and manage their daily food intake effortlessly.",
+    tags: ["React", "AI", "Health", "Full Stack"],
+    github: "https://github.com/SANJ-180605/NutriSnap",
+  },
+  {
+    number: "05",
+    title: "Medi-Assist",
+    desc: "The platform for common people to check their health with reports — an accessible medical assistance tool.",
+    tags: ["React", "FastAPI", "ML/DL", "Healthcare"],
+    github: "https://github.com/SANJ-180605/Medi-Assist",
   },
 ];
 
@@ -111,12 +122,12 @@ const contactCards = [
   },
 ];
 
-const resumeUrl = "https://drive.google.com/file/d/1_BYHPjhlsaY0B3o9-5hKuJHR0wqev_PG/view?usp=drive_link";
+const resumeUrl = "https://drive.google.com/file/d/1s0S1TM6MheW4xlapuKPx1eXSTJElRI58/view?usp=drive_link";
 
 const heroStats = [
   { value: "9.42★", label: "CGPA · 5 semesters" },
   { value: "125+", label: "LeetCode Problems" },
-  { value: "4+", label: "Full Stack Projects" },
+  { value: "5+", label: "Full Stack Projects" },
 ];
 
 export default function App() {
@@ -550,7 +561,7 @@ export default function App() {
                       <p className="pcard-desc mt-6 text-zinc-400 leading-8">{project.desc}</p>
                       <div className="pcard-foot mt-10 flex items-center justify-between border-t border-white/10 pt-6 text-sm text-purple-300">
                         <span>View on GitHub</span>
-                        <a href="https://github.com/SANJ-180605" target="_blank" rel="noreferrer" className="plink font-semibold hover:text-white">
+                        <a href={project.github} target="_blank" rel="noreferrer" className="plink font-semibold hover:text-white">
                           →
                         </a>
                       </div>
